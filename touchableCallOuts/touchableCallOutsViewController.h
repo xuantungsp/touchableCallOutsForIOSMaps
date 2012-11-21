@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-@interface touchableCallOutsViewController : UIViewController
 
+@class myCustomPinAnnotationClass;
+
+@interface touchableCallOutsViewController : UIViewController <MKMapViewDelegate> {
+    MKMapView *myMapView;
+    int pinCounter;
+    myCustomPinAnnotationClass *myAnnotation;
+    CLLocationCoordinate2D selectedPinCoordinate;
+    int selectedPinNumber;
+}
+
+@property (strong, nonatomic) MKMapView *myMapView;
+@property (strong, nonatomic) myCustomPinAnnotationClass *myAnnotation;
 @end

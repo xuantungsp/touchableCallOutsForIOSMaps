@@ -18,6 +18,8 @@
 		380EE345165BF04D00D0E831 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 380EE344165BF04D00D0E831 /* Default-568h@2x.png */; };
 		380EE348165BF04D00D0E831 /* touchableCallOutsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380EE347165BF04D00D0E831 /* touchableCallOutsViewController.m */; };
 		380EE34B165BF04D00D0E831 /* touchableCallOutsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 380EE349165BF04D00D0E831 /* touchableCallOutsViewController.xib */; };
+		380EE352165BF0D500D0E831 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 380EE351165BF0D500D0E831 /* MapKit.framework */; };
+		380EE355165BF2DA00D0E831 /* myCustomPinAnnotationClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 380EE354165BF2DA00D0E831 /* myCustomPinAnnotationClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,9 @@
 		380EE346165BF04D00D0E831 /* touchableCallOutsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = touchableCallOutsViewController.h; sourceTree = "<group>"; };
 		380EE347165BF04D00D0E831 /* touchableCallOutsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = touchableCallOutsViewController.m; sourceTree = "<group>"; };
 		380EE34A165BF04D00D0E831 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/touchableCallOutsViewController.xib; sourceTree = "<group>"; };
+		380EE351165BF0D500D0E831 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		380EE353165BF2DA00D0E831 /* myCustomPinAnnotationClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myCustomPinAnnotationClass.h; sourceTree = "<group>"; };
+		380EE354165BF2DA00D0E831 /* myCustomPinAnnotationClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myCustomPinAnnotationClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				380EE352165BF0D500D0E831 /* MapKit.framework in Frameworks */,
 				380EE32F165BF04D00D0E831 /* UIKit.framework in Frameworks */,
 				380EE331165BF04D00D0E831 /* Foundation.framework in Frameworks */,
 				380EE333165BF04D00D0E831 /* CoreGraphics.framework in Frameworks */,
@@ -73,6 +79,7 @@
 		380EE32D165BF04D00D0E831 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				380EE351165BF0D500D0E831 /* MapKit.framework */,
 				380EE32E165BF04D00D0E831 /* UIKit.framework */,
 				380EE330165BF04D00D0E831 /* Foundation.framework */,
 				380EE332165BF04D00D0E831 /* CoreGraphics.framework */,
@@ -88,6 +95,8 @@
 				380EE346165BF04D00D0E831 /* touchableCallOutsViewController.h */,
 				380EE347165BF04D00D0E831 /* touchableCallOutsViewController.m */,
 				380EE349165BF04D00D0E831 /* touchableCallOutsViewController.xib */,
+				380EE353165BF2DA00D0E831 /* myCustomPinAnnotationClass.h */,
+				380EE354165BF2DA00D0E831 /* myCustomPinAnnotationClass.m */,
 				380EE335165BF04D00D0E831 /* Supporting Files */,
 			);
 			path = touchableCallOuts;
@@ -177,6 +186,7 @@
 				380EE33B165BF04D00D0E831 /* main.m in Sources */,
 				380EE33F165BF04D00D0E831 /* touchableCallOutsAppDelegate.m in Sources */,
 				380EE348165BF04D00D0E831 /* touchableCallOutsViewController.m in Sources */,
+				380EE355165BF2DA00D0E831 /* myCustomPinAnnotationClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,10 +265,15 @@
 		380EE34F165BF04D00D0E831 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: yasin turkoglu (2YARA7RB54)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: yasin turkoglu (2YARA7RB54)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "touchableCallOuts/touchableCallOuts-Prefix.pch";
 				INFOPLIST_FILE = "touchableCallOuts/touchableCallOuts-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "73B577CC-43BB-4AA5-AE5E-1AC24E948AA1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "73B577CC-43BB-4AA5-AE5E-1AC24E948AA1";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -269,6 +284,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "touchableCallOuts/touchableCallOuts-Prefix.pch";
 				INFOPLIST_FILE = "touchableCallOuts/touchableCallOuts-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -293,6 +309,7 @@
 				380EE350165BF04D00D0E831 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
